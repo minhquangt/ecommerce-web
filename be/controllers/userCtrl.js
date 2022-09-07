@@ -42,7 +42,9 @@ const userCtrl = {
             // check email is already exist
             const user = await Users.findOne({ email });
             if (!user)
-                return res.status(400).json({ msg: 'User does not exist.' });
+                return res
+                    .status(400)
+                    .json({ msg: 'Incorrect email or password.' });
 
             // check password is correct
             const isMatch = await bcrypt.compare(
@@ -50,7 +52,9 @@ const userCtrl = {
                 user.password
             );
             if (!isMatch)
-                return res.status(400).json({ msg: 'Incorrect password.' });
+                return res
+                    .status(400)
+                    .json({ msg: 'Incorrect email or password.' });
 
             // If login success , create access token and refresh token
             const accesstoken = createAccessToken({ id: user._id });

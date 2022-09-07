@@ -21,8 +21,8 @@ function Login() {
             setLoading(true);
             const resultAction = await dispatch(loginUser(values));
             const user = unwrapResult(resultAction);
+            setLoading(false);
             if (user) {
-                setLoading(false);
                 navigate('/');
             }
         },

@@ -6,6 +6,7 @@
     img {
         width: 113px;
         height: 113px;
+        cursor: pointer;
     }
     .left {
         margin-right: 30px;
@@ -15,6 +16,7 @@
             font-weight: 700;
             text-decoration: none;
             color: #000;
+            cursor: pointer;
         }
         .desc {
             font-style: italic;

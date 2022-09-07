@@ -22,13 +22,6 @@ function CustomerFavorites() {
                 </span>
             </div>
             <div className='products'>
-                {/* <img
-                    src="https://cdn.shopify.com/s/files/1/0569/3076/2932/products/ByVilainSidekickzerolimitededition2022155mlfront-min_600x.jpg?v=1653914803"
-                    alt=""
-                />
-                <span>By Vilain Limited Edition 2-Pack</span>
-                <span>€22,00</span>
-                <button className="btn btn-dark">Add to Cart</button> */}
                 {favoriteProduct?.favorite?.map((product) => (
                     <div className='col-3' key={product._id}>
                         <ProductItem product={product} />
