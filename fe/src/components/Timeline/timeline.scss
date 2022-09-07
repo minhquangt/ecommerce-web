@@ -1,0 +1,44 @@
+.about-timeline {
+    position: relative;
+}
+
+.timeline-container:before {
+    content: '';
+    background: black;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 10%;
+}
+
+.timeline-container ul {
+    margin-top: 48px;
+}
+
+.timeline-container ul li {
+    position: relative;
+}
+
+.timeline-content {
+    margin-bottom: 100px;
+}
+
+.timeline-content:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    top: 6%;
+    left: -13%;
+}
+
+p.timeline-date {
+    font-weight: 900;
+}
+
+p.timeline-desc {
+    font-size: 14px;
+}

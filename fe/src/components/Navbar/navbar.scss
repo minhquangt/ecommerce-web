@@ -1,0 +1,62 @@
+.navbar {
+    background-color: #000;
+    height: 80px;
+    .left {
+        a.active {
+            color: red;
+        }
+    }
+    .right {
+        a.active {
+            color: red;
+        }
+    }
+    .left a,
+    .right a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        margin-left: 28px;
+    }
+    .left a:hover,
+    .right a:hover {
+        color: red;
+    }
+    .logo {
+        margin-left: -28px;
+    }
+    .right {
+        margin-right: 28px;
+    }
+    .right a,
+    .search i,
+    .search span {
+        color: white;
+        font-size: 20px;
+        position: relative;
+    }
+    .search:hover .fa-search,
+    .search:hover .search-text {
+        color: red;
+    }
+    .right i {
+        margin-right: 8px;
+    }
+    .search {
+        display: inline-block;
+    }
+    .search:hover {
+        cursor: pointer;
+    }
+    .btn-logout {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 20px;
+        margin-left: 28px;
+    }
+    .btn-logout:hover {
+        color: red;
+    }
+}

@@ -1,0 +1,23 @@
+.filter-product {
+    margin: 40px;
+    display: flex;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+    img {
+        width: 113px;
+        height: 113px;
+    }
+    .left {
+        margin-right: 30px;
+    }
+    .right {
+        .name {
+            font-weight: 700;
+            text-decoration: none;
+            color: #000;
+        }
+        .desc {
+            font-style: italic;
+        }
+    }
+}

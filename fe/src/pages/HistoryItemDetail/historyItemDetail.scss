@@ -1,0 +1,17 @@
+.history-detail {
+    .info-customer {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .info-order {
+        img {
+            width: 200px;
+        }
+        th,
+        td {
+            padding-top: 28px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+}
