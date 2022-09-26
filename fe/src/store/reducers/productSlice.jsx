@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import axiosNormal from 'api/axiosNormal';
 
 export const getAllProducts = createAsyncThunk('product/getAllProducts', async () => {
     try {
-        const res = await axios.get('/api/product');
+        const res = await axiosNormal.get('/api/product');
         return res.data;
     } catch (error) {
         console.log(error);
@@ -12,7 +12,7 @@ export const getAllProducts = createAsyncThunk('product/getAllProducts', async (
 
 export const getOneProduct = createAsyncThunk('product/getOneProduct', async (id) => {
     try {
-        const res = await axios.get(`/api/product/${id}`);
+        const res = await axiosNormal.get(`/api/product/${id}`);
         return res.data;
     } catch (error) {
         console.log(error);
@@ -21,7 +21,7 @@ export const getOneProduct = createAsyncThunk('product/getOneProduct', async (id
 
 export const getFavoriteProducts = createAsyncThunk('product/getFavoriteProducts', async () => {
     try {
-        const res = await axios.get('/api/product/favorite');
+        const res = await axiosNormal.get('/api/product/favorite');
         return res.data;
     } catch (error) {
         console.log(error);
@@ -30,7 +30,7 @@ export const getFavoriteProducts = createAsyncThunk('product/getFavoriteProducts
 
 export const filterProducts = createAsyncThunk('product/filterProducts', async (searchTerm) => {
     try {
-        const res = await axios.post('/api/product/filter', { productName: searchTerm });
+        const res = await axiosNormal.post('/api/product/filter', { productName: searchTerm });
         return res.data;
     } catch (error) {
         console.log(error);

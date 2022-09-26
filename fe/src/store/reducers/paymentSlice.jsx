@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import axiosNormal from 'api/axiosNormal';
 
 export const getHistory = createAsyncThunk('payment/getHistory', async (user) => {
     try {
-        const res = await axios.get('/api/user/history', {
+        const res = await axiosNormal.get('/api/user/history', {
             headers: { Authorization: user.accesstoken },
         });
         return res.data;

@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axiosNormal from 'api/axiosNormal';
 import { useFormik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCart, userSelector } from 'store/reducers/userSlice';
@@ -32,7 +32,7 @@ function Payment({ notice }) {
     });
     const payment = async (info) => {
         try {
-            await axios.post('/api/payment', info, {
+            await axiosNormal.post('/api/payment', info, {
                 headers: { Authorization: user.accesstoken },
             });
             const cart = [];

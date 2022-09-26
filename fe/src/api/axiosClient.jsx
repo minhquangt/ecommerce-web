@@ -1,6 +1,8 @@
-const { default: axios } = require('axios');
+import axios from 'axios';
 
-const axiosClient = axios.create({});
+const axiosClient = axios.create({
+    baseURL: 'http://localhost:5000',
+});
 
 //Interceptors
 // Add a request interceptor

@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import axiosNormal from 'api/axiosNormal';
 
 export const registerUser = createAsyncThunk('user/registerUser', async (user) => {
     try {
-        const res = await axios.post('api/user/register', user);
+        const res = await axiosNormal.post('api/user/register', user);
         localStorage.setItem('accesstoken', res.data.accesstoken);
         return res.data;
     } catch (error) {
@@ -13,7 +13,7 @@ export const registerUser = createAsyncThunk('user/registerUser', async (user) =
 
 export const loginUser = createAsyncThunk('user/loginUser', async (user) => {
     try {
-        const res = await axios.post('api/user/login', user);
+        const res = await axiosNormal.post('api/user/login', user);
         localStorage.setItem('accesstoken', res.data.accesstoken);
         return res.data;
     } catch (error) {
@@ -30,7 +30,7 @@ export const addCart = createAsyncThunk('user/addCart', async (payload) => {
             apiRequest = '/api/user/addcart';
         }
 
-        const res = await axios.put(apiRequest, payload.cart, {
+        const res = await axiosNormal.put(apiRequest, payload.cart, {
             headers: { Authorization: payload.user.accesstoken },
         });
         return res.data;

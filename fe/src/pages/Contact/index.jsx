@@ -1,3 +1,4 @@
+import axiosNormal from 'api/axiosNormal';
 import axios from 'axios';
 import Overlay from 'components/Overlay';
 import { useFormik } from 'formik';
@@ -29,7 +30,7 @@ function Contact() {
 
     const sendMessage = async (data) => {
         try {
-            const res = await axios.post('/api/sendEmail', data);
+            const res = await axiosNormal.post('/api/sendEmail', data);
             setLoading(false);
             alert(res.data.msg);
         } catch (error) {
