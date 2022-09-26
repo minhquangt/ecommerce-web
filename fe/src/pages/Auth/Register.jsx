@@ -71,7 +71,7 @@ function Register() {
                     <p className='text-danger'> {formikRegister.errors.email} </p>
                 )}
                 <input
-                    type='text'
+                    type='password'
                     id='password'
                     name='password'
                     value={formikRegister.values.password}
@@ -82,7 +82,7 @@ function Register() {
                     <p className='text-danger'>{formikRegister.errors.password} </p>
                 )}
                 <input
-                    type='text'
+                    type='password'
                     id='confirmedPassword'
                     name='confirmedPassword'
                     value={formikRegister.values.confirmedPassword}
