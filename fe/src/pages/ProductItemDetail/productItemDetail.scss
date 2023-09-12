@@ -81,3 +81,21 @@
     list-style: disc;
     font-size: 14px;
 }
+
+@media only screen and (max-width: 576px) {
+    .product-item-detail {
+        display: flex;
+        flex-direction: column;
+        margin: 100px 20px;
+        justify-content: space-between;
+        .currency {
+            font-size: 24px;
+            top: -16px;
+            left: 6px;
+        }
+    }
+    .product-item-detail img {
+        width: 370px;
+        height: 370px;
+    }
+}

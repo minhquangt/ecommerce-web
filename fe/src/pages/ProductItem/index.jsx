@@ -41,10 +41,10 @@ function ProductItem({ product }) {
         }
     };
     return (
-        <div className='product-item'>
+        <div className='col-md-3 col-6 product-item'>
             <ToastContainer />
             <Link to={`/product-list/${product._id}`}>
-                <img src={product.images} alt={product.name} />
+                <img src={product.images} alt={product.name} className='product-img' />
             </Link>
             <div className='product-item-info'>
                 <Link to={`/product-list/${product.id}`}>
