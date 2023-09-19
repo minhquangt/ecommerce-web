@@ -56,7 +56,14 @@
     padding: 10px;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
+    .products {
+        display: block;
+    }
+    .intro h1,
+    .intro p {
+        text-align: center;
+    }
     .product-item img.product-img {
         width: 175px;
         height: 175px;

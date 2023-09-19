@@ -1,11 +1,11 @@
 import React from 'react';
 import waxes from '../../assets/wax.jpg';
 import prestyling from '../../assets/prestyling.jpg';
-import featured1 from '../../assets/featured1.jpg';
-import featured2 from '../../assets/featured2.jpg';
-import featured3 from '../../assets/featured3.jpg';
-import featured4 from '../../assets/featured4.jpg';
-import featured5 from '../../assets/featured5.jpg';
+import featured1 from '../../assets/featured1.avif';
+import featured2 from '../../assets/featured2.avif';
+import featured3 from '../../assets/featured3.avif';
+import featured4 from '../../assets/featured4.avif';
+import featured5 from '../../assets/featured5.avif';
 import './featured.scss';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ function Featured() {
                     <span>By Loyal customers from +120 countries</span>
                 </div>
                 <div className='row'>
-                    <div className='col-6 category'>
+                    <div className='col-md-6 col-12 category'>
                         <img src={waxes} alt='waxes' />
                         <div className='category-content'>
                             <h2>Hair Waxes</h2>
@@ -27,7 +27,7 @@ function Featured() {
                             </Link>
                         </div>
                     </div>
-                    <div className='col-6 category'>
+                    <div className='col-md-6 col-12 category'>
                         <img src={prestyling} alt='prestyling' />
                         <div className='category-content'>
                             <h2>Pre-styling</h2>

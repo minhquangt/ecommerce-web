@@ -27,7 +27,7 @@ function History() {
                     </thead>
                     <tbody>
                         {payment.history.map((item, index) => (
-                            <tr>
+                            <tr key={index}>
                                 <th>{index + 1}</th>
                                 <td>{item._id}</td>
                                 <td>{item.createdAt.slice(0, 10)}</td>

@@ -17,11 +17,24 @@ button {
 }
 
 .content {
-    margin-top: 90px;
+    margin-top: 80px;
     min-height: 250px;
 }
 
 .currency {
     font-size: 14px;
     margin-right: 2px;
+}
+
+.app {
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .app {
+        position: relative;
+    }
+    .content {
+        margin-top: 30px;
+    }
 }

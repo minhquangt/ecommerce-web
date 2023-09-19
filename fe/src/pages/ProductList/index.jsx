@@ -20,7 +20,7 @@ function ProductList() {
     return (
         <div className='products'>
             <div className='row'>
-                <div className='col-3 intro'>
+                <div className='col-md-3 col-12 intro'>
                     <h1>By Vilain</h1>
                     <p>
                         We provide professional men’s grooming products that give you a satisfying
@@ -39,7 +39,7 @@ function ProductList() {
                         high-caliber products that By Vilain is known for.
                     </p>
                 </div>
-                <div className='col-9 product-list'>
+                <div className='col-md-9 col-12 product-list'>
                     <div className='row'>
                         {products.all.slice(0, visible).map((product) => (
                             <div className='col-4' key={product._id}>

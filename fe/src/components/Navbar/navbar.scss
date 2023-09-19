@@ -59,4 +59,71 @@
     .btn-logout:hover {
         color: red;
     }
+    .menu {
+        display: none;
+        color: white;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+    .navbar-responsive {
+        display: none;
+        transition: all 0.5s;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 8px;
+        .left,
+        .right {
+            display: none;
+        }
+        .menu {
+            display: block;
+        }
+        .logo {
+            margin-left: 0;
+        }
+    }
+    .navbar-responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        top: 80px;
+        background: #000;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1030;
+        overflow-y: hidden;
+        .search {
+            margin: 16px 0;
+        }
+        .search i,
+        .search span {
+            color: white;
+            font-size: 20px;
+            position: relative;
+        }
+        a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 16px 0;
+        }
+        .btn-logout {
+            background: #000;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 20px;
+            margin: 16px 0;
+        }
+        i {
+            margin-right: 8px;
+        }
+    }
 }

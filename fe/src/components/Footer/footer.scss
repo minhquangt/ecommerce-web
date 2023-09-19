@@ -49,3 +49,29 @@
 .as input:focus {
     outline: none;
 }
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        background-color: #f2f2f2;
+        color: #64686d;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .as h1 {
+            text-align: center;
+        }
+
+        .as p {
+            text-align: center;
+        }
+
+        .as ul {
+            text-align: center;
+        }
+        .as button {
+            margin: 16px auto;
+        }
+    }
+}

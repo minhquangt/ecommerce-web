@@ -42,3 +42,9 @@ p.timeline-date {
 p.timeline-desc {
     font-size: 14px;
 }
+
+@media only screen and (max-width: 768px) {
+    .about-timeline {
+        margin-top: 28px !important;
+    }
+}

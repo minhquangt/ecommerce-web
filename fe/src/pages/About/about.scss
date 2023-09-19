@@ -1,5 +1,8 @@
 .about {
     margin: 0 60px;
+    .title {
+        padding: 40px 0;
+    }
 }
 
 .about-content h1 {
@@ -12,4 +15,20 @@
 .about-content p {
     margin-bottom: 14px;
     font-size: 14px;
+}
+
+@media only screen and (max-width: 768px) {
+    .about {
+        margin: 0 20px;
+        .title {
+            padding: 0;
+        }
+        .img-container {
+            display: flex;
+            justify-content: center;
+            img {
+                width: 268px;
+            }
+        }
+    }
 }

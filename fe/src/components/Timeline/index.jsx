@@ -3,7 +3,7 @@ import './timeline.scss';
 
 function TimeLine() {
     return (
-        <div className='about-timeline col-2'>
+        <div className='col-sm-2 col-12 about-timeline'>
             <div className='timeline-container'>
                 <ul>
                     <li>

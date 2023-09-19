@@ -9,9 +9,9 @@ import TimeLine from 'components/Timeline';
 function About() {
     return (
         <div className='about'>
-            <h1 className='text-center pt-5 pb-5'>About</h1>
+            <h1 className='text-center title'>About</h1>
             <div className='row'>
-                <div className='col-5'>
+                <div className='col-sm-5 col-12'>
                     <div className='about-content'>
                         <h1>By Vilain</h1>
                         <p>
@@ -26,7 +26,9 @@ function About() {
                             are a Scandinavian blend of stylish sophistication, professional
                             dynamism, avant-garde edge, and clean minimalism.{' '}
                         </p>
-                        <img src={about1} alt='' />
+                        <div className='img-container'>
+                            <img src={about1} alt='about1' />
+                        </div>
                     </div>
                     <div className='about-content'>
                         <h1>Our Story</h1>
@@ -41,7 +43,9 @@ function About() {
                             Sidekick Pre-Styling Spray. From our beginnings at the hair salon to our
                             impact on the global haircare game, we’ve come a long way!
                         </p>
-                        <img src={about2} alt='' />
+                        <div className='img-container'>
+                            <img src={about2} alt='about2' />
+                        </div>
                     </div>
                     <div className='about-content'>
                         <h1>Our Mission</h1>
@@ -70,10 +74,9 @@ function About() {
                             Our goal is to help men along the way to become a better version of
                             themselves.{' '}
                         </p>
-                        <img src={about2} alt='' />
                     </div>
                 </div>
-                <div className='col-5'>
+                <div className='col-sm-5 col-12'>
                     <div className='about-content'>
                         <h1>Who We Are</h1>
                         <p>
@@ -85,7 +88,9 @@ function About() {
                             and where we come from, and our name on the label shows our commitment
                             to uncompromising quality.
                         </p>
-                        <img src={about3} alt='' />
+                        <div className='img-container'>
+                            <img src={about3} alt='about3' />
+                        </div>
                     </div>
                     <div className='about-content'>
                         <h1>Why By Vilain?</h1>
@@ -109,7 +114,9 @@ function About() {
                             customers in over 120 countries and for providing the go-to products for
                             professional salons worldwide.
                         </p>
-                        <img src={about4} alt='' />
+                        <div className='img-container'>
+                            <img src={about4} alt='about4' />
+                        </div>
                     </div>
                 </div>
                 <TimeLine />
