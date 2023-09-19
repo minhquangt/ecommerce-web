@@ -47,14 +47,13 @@ function HistoryItemDetail() {
                         </thead>
                         <tbody>
                             {historyItem.cart.map((product) => (
-                                <tr>
+                                <tr key={product._id}>
                                     <td>
                                         <img src={product.images} alt='' />
                                     </td>
                                     <td>{product.name}</td>
                                     <td>
-                                        {product.quantity} x 
-                                        <span className='currency'>€</span>
+                                        {product.quantity} x<span className='currency'>€</span>
                                         {formatNumber(product.price)}
                                     </td>
                                     <td>
@@ -64,7 +63,7 @@ function HistoryItemDetail() {
                                 </tr>
                             ))}
                             <tr>
-                                <td colspan='2'></td>
+                                <td colSpan='2'></td>
                                 <td>
                                     <h5>Total:</h5>
                                 </td>

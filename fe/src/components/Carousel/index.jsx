@@ -52,8 +52,6 @@ function Carousel() {
                             <li>Protects & strengthens</li>
                             <li>Free of alcohol & fragrance</li>
                             <li>100% vegan ingredients</li>
-                            <li>Suitable for all skin types</li>
-                            <li>Produced in Denmark</li>
                         </ul>
                         <button className='btn btn-light'>READ MORE...</button>
                     </div>

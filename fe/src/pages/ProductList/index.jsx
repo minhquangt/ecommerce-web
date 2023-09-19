@@ -42,7 +42,7 @@ function ProductList() {
                 <div className='col-md-9 col-12 product-list'>
                     <div className='row'>
                         {products.all.slice(0, visible).map((product) => (
-                            <div className='col-4' key={product._id}>
+                            <div className='col-md-4 col-6 product-item' key={product._id}>
                                 <ProductItem product={product} />
                             </div>
                         ))}

@@ -20,7 +20,7 @@
                 rgba(50, 50, 50, 0.3) 0%,
                 rgba(50, 50, 50, 0.8) 75%
             );
-            width: 96%;
+            width: 97%;
             height: 100%;
             position: absolute;
             top: 0;
@@ -55,6 +55,13 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .categories {
+        .category {
+            &:before {
+                width: 93%;
+            }
+        }
+    }
     .featured-here {
         .feature-photo {
             display: flex;

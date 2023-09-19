@@ -41,7 +41,7 @@ function ProductItem({ product }) {
         }
     };
     return (
-        <div className='col-md-3 col-6 product-item'>
+        <>
             <ToastContainer />
             <Link to={`/product-list/${product._id}`}>
                 <img src={product.images} alt={product.name} className='product-img' />
@@ -58,7 +58,7 @@ function ProductItem({ product }) {
                     Add to Cart
                 </button>
             </div>
-        </div>
+        </>
     );
 }
 

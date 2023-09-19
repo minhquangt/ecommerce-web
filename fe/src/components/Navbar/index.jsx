@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { closeMenu, menuSelector, toggleMenu } from 'store/reducers/menuSlice';
+import { closeMenu, menuSelector, openSearch, toggleMenu } from 'store/reducers/menuSlice';
 import { userSelector } from 'store/reducers/userSlice';
 import logo from '../../assets/logo.png';
 import { logoutUser } from '../../store/reducers/userSlice';
@@ -62,7 +62,7 @@ function Navbar({ setIsDisplay }) {
                     </NavLink>
                 </div>
                 <div className='right'>
-                    <div className='search' onClick={() => setIsDisplay(true)}>
+                    <div className='search' onClick={() => dispatch(openSearch())}>
                         <i className='fas fa-search'></i>
                         <span className='search-text'>Search</span>
                     </div>

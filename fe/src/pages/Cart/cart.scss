@@ -1,5 +1,5 @@
 .cart {
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 .cart h1 {
@@ -15,10 +15,16 @@
 .cart-item {
     margin: 20px auto;
     padding: 30px;
-    width: 800px;
+    width: 70%;
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid #ccc;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .cart-text {
@@ -30,9 +36,8 @@
 }
 
 .cart-text .quantity span {
-    width: 20px;
     text-align: center;
-    margin: 0 10px;
+    font-size: 20px;
 }
 
 .cart-text button {
@@ -63,4 +68,19 @@
     background-color: #000;
     padding: 10px;
     color: white;
+}
+@media only screen and (max-width: 768px) {
+    .cart-item {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+    .close i {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .cart-text button {
+        font-size: 36px;
+    }
 }

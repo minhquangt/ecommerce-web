@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { closeMenu } from 'store/reducers/menuSlice';
+import { closeMenu, openSearch } from 'store/reducers/menuSlice';
 import { logoutUser, userSelector } from 'store/reducers/userSlice';
 
 const NavbarResponsive = () => {
@@ -45,6 +45,10 @@ const NavbarResponsive = () => {
             </>
         );
     };
+    const handleOpenSearch = () => {
+        dispatch(openSearch());
+        handleCloseMenu();
+    };
     return (
         <div className='navbar-responsive'>
             <NavLink to='/' onClick={handleCloseMenu}>
@@ -59,7 +63,7 @@ const NavbarResponsive = () => {
             <NavLink to='/contact' onClick={handleCloseMenu}>
                 Contact us
             </NavLink>
-            <div className='search' onClick={handleCloseMenu}>
+            <div className='search' onClick={handleOpenSearch}>
                 <i className='fas fa-search'></i>
                 <span className='search-text'>Search</span>
             </div>

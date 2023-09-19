@@ -4,11 +4,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { filterProducts, productSelector } from 'store/reducers/productSlice';
 import './search.scss';
+import { closeSearch, menuSelector } from 'store/reducers/menuSlice';
 
-function Search({ isDisplay, setIsDisplay }) {
+function Search() {
     const [searchTerm, setSearchTerm] = useState('');
     const dispatch = useDispatch();
     const products = useSelector(productSelector);
+    const menu = useSelector(menuSelector);
 
     const search = async (e) => {
         setSearchTerm(e.target.value);
@@ -17,20 +19,20 @@ function Search({ isDisplay, setIsDisplay }) {
 
     const navigate = useNavigate();
     const redirectProductDetail = (product) => {
-        setIsDisplay(false);
+        dispatch(closeSearch());
         navigate(`/product-list/${product._id}`);
     };
 
     return (
         <div className='search-component'>
             <div
-                className={isDisplay ? 'overlay-modal' : 'overlay-modal hide'}
-                onClick={() => setIsDisplay(false)}
+                className={menu.isDisplaySearch ? 'overlay-modal' : 'overlay-modal hide'}
+                onClick={() => dispatch(closeSearch())}
             ></div>
-            <div className={isDisplay ? 'search-modal go-on' : 'search-modal go-out'}>
+            <div className={menu.isDisplaySearch ? 'search-modal go-on' : 'search-modal go-out'}>
                 <div className='title'>
                     <p>Search</p>
-                    <i className='fa-solid fa-xmark' onClick={() => setIsDisplay(false)}></i>
+                    <i className='fa-solid fa-xmark' onClick={() => dispatch(closeSearch())}></i>
                 </div>
                 <p className='text-center endow'>
                     Spend €75,00 more and get a free By Vilain Skincare Solution 2-Pack!

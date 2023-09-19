@@ -1,5 +1,6 @@
 .contact {
     margin-left: 20px;
+    padding-top: 20px;
 }
 
 .contact h1 {
@@ -43,7 +44,6 @@
 
 @media only screen and (max-width: 768px) {
     .contact {
-        margin-top: 100px;
         margin-left: 0;
         form {
             width: 86%;

@@ -1,5 +1,6 @@
 .products {
     display: flex;
+    padding-top: 20px;
 }
 
 .row .intro {
@@ -22,6 +23,7 @@
 .product-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 16px;
 }
@@ -46,6 +48,7 @@
 }
 
 .product-item-info {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

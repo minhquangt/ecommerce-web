@@ -23,7 +23,9 @@ function CustomerFavorites() {
             </div>
             <div className='row products'>
                 {favoriteProduct?.favorite?.map((product) => (
-                    <ProductItem product={product} key={product._id} />
+                    <div className='col-md-3 col-6 product-item' key={product._id}>
+                        <ProductItem product={product} />
+                    </div>
                 ))}
             </div>
         </div>

@@ -7,15 +7,14 @@ import './App.scss';
 import MainPages from './pages';
 
 function App() {
-    const [isDisplay, setIsDisplay] = useState(false);
     return (
         <BrowserRouter>
             <div className='app'>
-                <Navbar setIsDisplay={setIsDisplay} />
+                <Navbar />
                 <div className='content'>
                     <MainPages />
                 </div>
-                <Search isDisplay={isDisplay} setIsDisplay={setIsDisplay} />
+                <Search />
                 <Footer />
             </div>
         </BrowserRouter>
